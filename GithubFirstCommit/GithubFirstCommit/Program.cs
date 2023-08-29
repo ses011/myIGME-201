@@ -10,8 +10,6 @@ namespace GithubFirstCommit
     {
         static void Main(string[] args)
         {
-
-
         }
     }
 }
