@@ -3,7 +3,7 @@
 namespace SquashTheBugs
 {
     // Class Program
-    // Author: David Schuh
+    // Author: Sarah Schneider
     // Purpose: Bug squashing exercise
     // Restrictions: None
     class Program
@@ -42,7 +42,7 @@ namespace SquashTheBugs
                 }
                 catch
                 {
-                    Console.WriteLine("Cannot divide by zero.");
+                    Console.WriteLine("Cannot divide by zero");
                 }
                 
 
