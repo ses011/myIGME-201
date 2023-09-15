@@ -1,4 +1,12 @@
-﻿using System;
+﻿/** Sarah Schneider
+ * 
+ * Program to guess a randomly generated number between 0-100 within 8 tries. Only integers are accepted values, will have user input
+ * new values if values are outside of this range or are not integers. Option to play again after each random number guessed.
+ * 
+ */
+
+
+using System;
 
 namespace PE6_NumGuesser {
     internal class Program {
