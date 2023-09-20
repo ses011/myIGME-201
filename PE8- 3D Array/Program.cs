@@ -10,9 +10,11 @@ namespace PE8__3D_Array {
         static void Main(string[] args) {
             double[][,] result = new double[21][,];
 
-            //1st dimention counter
+            //first dimention counter
             int f = 0;
 
+            //loops through all values of y for all values of x, does the math to get result of z
+            //saves values to arrays
             for (double x = -1; x <= 1; x += 0.1) {
                 double[,] tempArray = new double[2, 31];
 
@@ -27,17 +29,17 @@ namespace PE8__3D_Array {
                     i++;
                 }
 
+                //adds 2d array to next spot in 3d array, increases to next index of 3d array
                 result[f] = tempArray;
-                //Console.WriteLine($"i = {i}");
-
-
                 f++;
             }
 
             Console.WriteLine((-0.1) + 0.1);
 
+            
             double inc = 0.1;
             double xval = -1;
+            //Loops through array, displaying all of the values of y and z for each value of x
             foreach (double[,] x in result) {
                 Console.WriteLine(" ----- x = " + Math.Round(xval, 2) + " -------");
                 for (int i = 0; i < x.Length/2; i++) {
@@ -46,8 +48,6 @@ namespace PE8__3D_Array {
 
                 xval += inc;
             }
-
-            Console.ReadLine();
         }
     }
 }
