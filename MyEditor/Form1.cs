@@ -13,7 +13,6 @@ namespace WindowsFormsApp1 {
         public Form1() {
             InitializeComponent();
 
-
             this.newToolStripMenuItem.Click += new EventHandler(NewToolStripMenuItem__Click);
             this.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click);
             this.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click);
@@ -23,15 +22,78 @@ namespace WindowsFormsApp1 {
             this.pasteToolStripMenuItem.Click += new EventHandler(PasteToolStripMenuItem__Click);
             this.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click);
 
+            this.boldToolStripMenuItem.Click += new EventHandler(BoldToolStripMenuItem__Click);
+            this.italicsToolStripMenuItem.Click += new EventHandler(ItalicsToolStripMenuItem__Click);
+            this.underlineToolStripMenuItem.Click += new EventHandler(UnderlineToolStripMenuItem__Click);
+
+            this.mSSansSerifToolStripMenuItem.Click += new EventHandler(MSSansSerifToolStripMenuItem__Click);
+            this.timesNewRomanToolStripMenuItem.Click += new EventHandler(TimesNewRomanToolStripMenuItem__Click);
+
+            this.richTextBox1.SelectionChanged += new EventHandler(richTextBox1__SelectionChanged);
             this.toolStrip.ItemClicked += new ToolStripItemClickedEventHandler(ToolStrip__ItemClicked);
             this.Text = "MyEditor";
 
 
         }
 
-        private void NewToolStripMenuItem__Click(object sender, EventArgs e) {
+        private void NewToolStripMenuItem__Click(Object sender, EventArgs e) {
             richTextBox1.Clear();
             this.Text = "MyEditor";
+        }
+        private void BoldToolStripMenuItem__Click(Object sender, EventArgs e) {
+            FontStyle fontStyle = FontStyle.Bold;
+            Font selectionFont = null;
+
+            selectionFont = richTextBox1.SelectionFont;
+            if (selectionFont == null) {
+                selectionFont = richTextBox1.Font;
+            }
+
+            SetSelectionFont(fontStyle, !selectionFont.Bold);
+        }
+
+        private void ItalicsToolStripMenuItem__Click(Object sender, EventArgs e) {
+            FontStyle fontStyle = FontStyle.Italic;
+            Font selectionFont = null;
+
+            selectionFont = richTextBox1.SelectionFont;
+            if (selectionFont == null) {
+                selectionFont = richTextBox1.Font;
+            }
+
+            SetSelectionFont(fontStyle, !selectionFont.Italic);
+        }
+
+        private void UnderlineToolStripMenuItem__Click(Object sender, EventArgs e) {
+            FontStyle fontStyle = FontStyle.Underline;
+            Font selectionFont = null;
+
+            selectionFont = richTextBox1.SelectionFont;
+            if (selectionFont == null) {
+                selectionFont = richTextBox1.Font;
+            }
+
+            SetSelectionFont(fontStyle, !selectionFont.Underline);
+        }
+
+        private void MSSansSerifToolStripMenuItem__Click(Object sender, EventArgs e) {
+            Font newFont = new Font("MS Sans Serif", richTextBox1.SelectionFont.Size, richTextBox1.SelectionFont.Style);
+            richTextBox1.SelectionFont = newFont;
+        }
+
+        private void TimesNewRomanToolStripMenuItem__Click(Object sender, EventArgs e) {
+            Font newFont = new Font("Times New Roman", richTextBox1.SelectionFont.Size, richTextBox1.SelectionFont.Style);
+            richTextBox1.SelectionFont = newFont;
+        }
+
+        private void richTextBox1__SelectionChanged(Object sender, EventArgs e) {
+            if (this.richTextBox1.SelectionFont != null) {
+                this.boldToolStripMenuItem.Checked = richTextBox1.SelectionFont.Bold;
+                this.italicsToolStripMenuItem.Checked = richTextBox1.SelectionFont.Italic;
+                this.underlineToolStripMenuItem.Checked = richTextBox1.SelectionFont.Underline;
+            }
+
+            this.colorTool
         }
 
         private void OpenToolStripMenuItem__Click(Object sender, EventArgs e) {
