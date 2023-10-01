@@ -1,6 +1,9 @@
 ﻿using System.IO;
 using System;
 
+
+// Sarah Schneider
+// Math quiz with added division functionalities
 class Program {
     static void Main() {
         // store user name
