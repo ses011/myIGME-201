@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Sarah Schneider
+//Test1-11 except with struct now
 namespace Test1_12 {
     internal class Program {
         struct Employee {

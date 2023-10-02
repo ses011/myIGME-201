@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Sarah Schneider
+
 namespace Test1_3 {
     internal class Program {
         //Delegate declaration

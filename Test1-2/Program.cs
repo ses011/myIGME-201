@@ -2,8 +2,7 @@
 
 namespace NumberSort {
     // Sarah Schneider
-    // Takes input from user (space seperated list of words) and sorts them into ascending or decending alphabetical order using selection sort
-    // 
+    // Takes input from user (space seperated list of words) and sorts them into ascending or decending alphabetical order using selection sort 
     class Program {
         // the definition of the delegate function data type
         delegate string sortingFunction(string[] a);
