@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedTypingTest", "TimedTypingTest.csproj", "{EEE96D51-C3C0-413F-A12A-6A80630DEF36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1.csproj", "{06E8BA6F-6CC3-4AF1-9F49-F4EE449A5F43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEE96D51-C3C0-413F-A12A-6A80630DEF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEE96D51-C3C0-413F-A12A-6A80630DEF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEE96D51-C3C0-413F-A12A-6A80630DEF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEE96D51-C3C0-413F-A12A-6A80630DEF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E8BA6F-6CC3-4AF1-9F49-F4EE449A5F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E8BA6F-6CC3-4AF1-9F49-F4EE449A5F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E8BA6F-6CC3-4AF1-9F49-F4EE449A5F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E8BA6F-6CC3-4AF1-9F49-F4EE449A5F43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {61DB36F3-C4E8-4FC4-A44C-6EF57B315B90}
+		SolutionGuid = {CB289C29-AFB3-4C16-B398-13E034FE3E54}
 	EndGlobalSection
 EndGlobal
