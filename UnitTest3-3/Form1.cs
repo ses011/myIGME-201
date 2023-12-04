@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/**
+ * Sleep tracker, but it insults you if you claim you sleep over 7 hours and will ignore you if you enter 4
+ */
 namespace UnitTest3_3
 {
     public partial class Form1 : Form
@@ -23,6 +27,7 @@ namespace UnitTest3_3
             this.textBox1.KeyPress += new KeyPressEventHandler(TextBox__KeyPress);
         }
 
+        // New window
         private void HistoryButton__Click(object sender, EventArgs e)
         {
             Form d = new Data(data);
