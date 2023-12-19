@@ -18,7 +18,13 @@ namespace Exam3_5
         {
             List<Node> nodes = SetNodes();
 
-            // DFS = Red, Blue, light blue, gray, orange, purple, green
+            List<Node> depth = DFS(nodes, nodes[0]);
+
+            // Reset visited value to reuse for Dijkstra
+            foreach (Node node in nodes)
+            {
+                node.finished = false;
+            }
 
             List<Node> dijkstra = Dijkstra(nodes, nodes[0]);
             
@@ -35,6 +41,8 @@ namespace Exam3_5
         public static List<Node> SetNodes()
         {
             List<Node> nodes = new List<Node>();
+            
+            // Node for each point
             Node red = new Node("red");
             Node blue = new Node("blue");
             Node gray = new Node("gray");
@@ -44,6 +52,7 @@ namespace Exam3_5
             Node green = new Node("green");
             Node orange = new Node("orange");
 
+            // Add all nodes to list
             nodes.Add(red);
             nodes.Add(blue);
             nodes.Add(gray);
@@ -53,6 +62,7 @@ namespace Exam3_5
             nodes.Add(green);
             nodes.Add(orange);
 
+            // Give all the nodes the edges and what they connect to
             red.edges.Add(new Edge(1, blue));
             red.edges.Add(new Edge(5, gray));
             gray.edges.Add(new Edge(1, orange));
@@ -133,13 +143,28 @@ namespace Exam3_5
 
         /*
          * Depth first search algorithm
+        */
 
-
-        public List<string> DFS()
+        public static List<Node> DFS(List<Node> nodes, Node root)
         {
+            List<Node> result = new List<Node>();
+            while (nodes.Count > 0)
+            {
+                foreach (Edge edge in root.edges)
+                {
+                    if (nodes.Contains(edge.end) && !edge.end.finished)
+                    {
+                        result.Add(edge.end);
+                        root = edge.end;
+                        break;
+                    }
+                }
 
+
+            }
+            return result;
         }
-*/
+
 
         /* Dijkstra's shortest path algorithm - recursively finds cheapest path
         */
