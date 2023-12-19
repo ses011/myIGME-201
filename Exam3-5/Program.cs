@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * IGME-201 Final Exam, Questions 3-5
+ * 
+ * Adjacency List, Adjacency Matrix, DFS, and Dijkstra's
+ * 
+ * 
+ */
 namespace Exam3_5
 {
     internal class Program
@@ -12,12 +18,16 @@ namespace Exam3_5
         {
             List<Node> nodes = SetNodes();
 
+            // DFS = Red, Blue, light blue, gray, orange, purple, green
+
             List<Node> dijkstra = Dijkstra(nodes, nodes[0]);
             
             foreach (Node node in dijkstra)
             {
                 Console.WriteLine(node.name);
             }
+
+
         }
 
         // Hard code the Node/Edge values and directions
